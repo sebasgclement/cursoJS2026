@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objetos</title>
+  </head>
+  <body>
+    <h1>Objetos</h1>
+
+    <script>
+      //   const alumno = {
+      //     nombre: "Lucía",
+      //     edad: 19,
+      //     ciudad: "Rafaela",
+      //     activo: true,
+      //     materias: ["HTML", "CSS", "JavaScript"],
+      //   };
+      //   console.log(`Hola me llamo ${alumno.nombre}`);
+      //   console.log(alumno.materias[2]);
+      //   alumno.ciudad = "Santa Fe";
+      //   console.log(alumno.ciudad);
+      //   delete alumno.activo;
+      //   console.log(alumno);
+      //   console.log(alumno.telefono);
+      const productos = [
+        { id: 1, nombre: "Teclado", precio: 25000, stock: 4 },
+        { id: 2, nombre: "Mouse", precio: 12000, stock: 0 },
+        { id: 3, nombre: "Monitor", precio: 180000, stock: 2 },
+      ];
+
+      //console.log(productos[1].nombre);
+      for (const producto of productos) {
+        // if (producto.stock > 0) {
+        //   console.log(`${producto.nombre} : ${producto.precio}`);
+        // }
+        if (producto.id === 2) {
+          console.log(`${producto.nombre} : ${producto.precio}`);
+        }
+      }
+    </script>
+  </body>
+</html>

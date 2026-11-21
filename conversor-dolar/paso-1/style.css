@@ -1,0 +1,40 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 0 16px;
+  line-height: 1.5;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin: 16px 0;
+}
+
+input,
+select,
+button {
+  font: inherit;
+  padding: 6px 10px;
+}
+
+#cotizacion {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+#resultado {
+  font-size: 1.2rem;
+}
+
+.cargando {
+  color: gray;
+  font-style: italic;
+}
+
+.error {
+  color: crimson;
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Métodos array</title>
+  </head>
+  <body>
+    <h1>Métodos array</h1>
+    <script>
+      const productos = [
+        {
+          nombre: "Teclado",
+          precio: 25000,
+          categoria: "perifericos",
+          stock: 4,
+        },
+        { nombre: "Mouse", precio: 12000, categoria: "perifericos", stock: 0 },
+        { nombre: "Monitor", precio: 180000, categoria: "pantallas", stock: 2 },
+        { nombre: "Auriculares", precio: 30000, categoria: "audio", stock: 7 },
+        { nombre: "Parlante", precio: 45000, categoria: "audio", stock: 1 },
+      ];
+      //   productos.forEach((producto) => {
+      //     console.log(`${producto.nombre} : $${producto.precio}`);
+      //   });
+      //   const nombres = productos.map((p) => p.nombre);
+      //   console.log(nombres);
+      //   const preciosConIva = productos.map((p) => p.precio * 1.21);
+      //   console.log(preciosConIva);
+      const conStock = productos.filter((p) => p.stock > 0);
+      console.log(conStock);
+      console.log(Math.round(4.5));
+    </script>
+  </body>
+</html>

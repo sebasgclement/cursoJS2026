@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Conversor de dólares</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>💵 Conversor de dólares</h1>
+
+    <p id="cotizacion">Cotización: —</p>
+
+    <form id="form-conversor">
+      <label for="tipo">Dólar</label>
+      <select id="tipo">
+        <option value="oficial">Oficial</option>
+        <option value="blue">Blue</option>
+        <option value="tarjeta">Tarjeta</option>
+      </select>
+
+      <label for="monto">Pesos</label>
+      <input id="monto" type="number" placeholder="Ej: 50000" />
+
+      <button type="submit">Convertir</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <h2>Últimas conversiones</h2>
+    <ul id="historial"></ul>
+  </body>
+</html>

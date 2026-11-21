@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segunda hoja</title>
+  </head>
+  <body>
+    <h1>Segunda hoja</h1>
+    <script>
+      /*
+      const edad = Number(prompt("Cuántos años tenés?"));
+      if (Number.isNaN(edad) || edad === 0) {
+        alert("Esto no es un número!!! ");
+      } else if (edad === "") {
+        alert("Debes ingresar un dato");
+      } else if (edad >= 18) {
+        alert("Eres mayor");
+      } else {
+        alert(`Te faltan ${18 - edad} años para poder pasar`);
+      }
+        
+      const mensaje = edad >= 18 ? "Mayor de edad" : "Menor de edad";
+      alert(mensaje);
+      */
+      const opcion = Number(prompt("Elegí: 1) Saldo 2) Depositar 3) Salir"));
+
+      switch (opcion) {
+        case 1:
+          alert("Tu saldo es 5000");
+          break;
+        case 2:
+          alert("Deposito realizado");
+          break;
+        case 3:
+          alert("Hasta luego!");
+          break;
+        default:
+          alert("Opción inválida");
+          break;
+      }
+    </script>
+  </body>
+</html>

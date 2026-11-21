@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <h1>Strings</h1>
+    <script>
+      //   const texto = " JavaScript es genial ";
+      //   console.log(texto.length);
+      //   console.log(texto.trim().toLowerCase());
+      //   //let busqueda = prompt("Ingrese la palabra a buscar");
+      //   //console.log(texto.includes(busqueda));
+      //   console.log(texto.startsWith(" "));
+      //   console.log(texto.endsWith("a"));
+      //   console.log(texto.indexOf("es"));
+      //   console.log(texto[1]);
+      //   const fecha = "2026-10-07";
+      //   console.log(fecha.slice(5, 7));
+      //   console.log(fecha.slice(-5));
+      //   const texto = "Hola mundo";
+      //   console.log(texto);
+      //   console.log(texto.replace("Hola mundo", "Hello world"));
+      //   console.log("a-b-c".replaceAll("-", "/"));
+      //   console.log("ja".repeat(3));
+      //   console.log("7".padStart(3, "0"));
+      //   console.log("7".padEnd(3, "0"));
+      const entrada = "Ana Luis Sofía";
+      const nombres = entrada.split(" ");
+      console.log(nombres);
+
+      for (let i = 0; i < nombres.length; i++) {
+        nombres[i] = nombres[i].trim();
+      }
+      console.log(nombres);
+      console.log(nombres.join(", "));
+
+      console.log("hola".split("").reverse().join(""));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista del súper</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1 id="titulo">Mi lista</h1>
+    <p class="subtitulo">Lo que hay que comprar esta semana</p>
+
+    <!-- <div class="agregar">
+      <input id="nuevo" placeholder="¿Qué falta?" required="true" />
+      <button id="btn-agregar">Agregar</button>
+      <button id="btn-vaciar">Vaciar</button>
+    </div> -->
+
+    <form id="form-agregar">
+      <label for="nuevo">Producto</label>
+      <input id="nuevo" type="text" placeholder="Qué falta?" />
+
+      <label for="cantidad">Cantidad</label>
+      <input id="cantidad" type="number" value="1" />
+
+      <label><input id="urgente" type="checkbox" />Urgente</label>
+
+      <button type="submit">Agregar</button>
+    </form>
+
+    <ul id="lista"></ul>
+
+    <p id="resumen"></p>
+  </body>
+</html>

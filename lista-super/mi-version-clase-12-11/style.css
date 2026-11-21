@@ -1,0 +1,43 @@
+body {
+    font-family: system-ui, sans-serif;
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 0 16px;
+}
+
+li {
+    padding: 6px 0;
+    cursor: pointer;
+}
+
+li button {
+    margin-left: 8px;
+}
+
+.urgente {
+    color: crimson;
+    font-weight: bold;
+}
+
+.comprado {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.destacado {
+    background: gold;
+}
+
+.oculto {
+    display: none;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+}
+
+#cantidad{width: 4em;}
+.error{color:crimson; min-height: 1.5em;}

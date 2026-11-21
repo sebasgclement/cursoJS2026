@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista del súper · Unidad 7 resuelta</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 760px;
+        margin: 40px auto;
+        padding: 0 16px;
+        line-height: 1.5;
+        color: #1d1c18;
+        background: #fbfaf6;
+      }
+      h1 { margin-bottom: 4px; }
+      .bajada { color: #5f5b4f; margin-top: 0; }
+      h2 { margin-top: 36px; font-size: 1.2rem; }
+      ol { list-style: none; padding: 0; display: grid; gap: 10px; }
+      li {
+        display: grid;
+        grid-template-columns: 110px 1fr auto;
+        gap: 4px 14px;
+        align-items: start;
+        padding: 12px 14px;
+        background: #fff;
+        border: 1px solid #e4e0d3;
+        border-radius: 10px;
+      }
+      li.ejercicio { border-left: 4px solid #8a5cc4; }
+      .num { font-family: ui-monospace, Consolas, monospace; font-weight: 600; }
+      .titulo { font-weight: 600; }
+      .mostrar { grid-column: 2; color: #5f5b4f; font-size: 0.92rem; }
+      a.abrir {
+        grid-row: 1 / span 2;
+        grid-column: 3;
+        align-self: center;
+        padding: 6px 14px;
+        border-radius: 8px;
+        background: #f7df1e;
+        color: #000;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      a.abrir:hover { filter: brightness(0.95); }
+      .nota {
+        padding: 12px 14px;
+        border-radius: 10px;
+        background: #fdf5bf;
+        font-size: 0.95rem;
+      }
+      code { font-family: ui-monospace, Consolas, monospace; font-size: 0.9em; }
+      button {
+        font: inherit;
+        padding: 8px 14px;
+        border-radius: 8px;
+        border: 1px solid #cbc5b3;
+        background: #fff;
+        cursor: pointer;
+      }
+      #estado-borrado { margin-left: 10px; color: #2b7a4b; }
+      @media (max-width: 560px) {
+        li { grid-template-columns: 1fr; }
+        .mostrar, a.abrir { grid-column: 1; grid-row: auto; justify-self: start; }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lista del súper · Unidad 7</h1>
+    <p class="bajada">
+      Cada paso de la guía, resuelto y funcionando. Abrí esta página con Live Server y entrá a cada
+      paso con su botón. En cada carpeta, el <code>script.js</code> arranca con un resumen de lo que
+      cambió y las líneas nuevas están marcadas con ★.
+    </p>
+
+    <p class="nota">
+      Los ejercicios (en violeta) parten del paso anterior, pero el paso siguiente no los incluye:
+      sigue la línea principal, igual que la guía. Tu código de la clase del 12/11 quedó intacto en
+      la carpeta <code>mi-version-clase-12-11</code>.
+    </p>
+
+    <h2>Clase 1 · Formularios</h2>
+    <ol>
+      <li>
+        <span class="num">Inicio</span><span class="titulo">Punto de partida (fin de la Unidad 6)</span>
+        <span class="mostrar">Input suelto con botón; tachar y borrar con delegación.</span>
+        <a class="abrir" href="00-punto-de-partida/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">1.1</span><span class="titulo">Del div al form</span>
+        <span class="mostrar">Tachá un producto y tocá Agregar: la página se recarga y se pierde todo.</span>
+        <a class="abrir" href="1.1-formulario/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">1.2</span><span class="titulo">submit y preventDefault()</span>
+        <span class="mostrar">Ya no recarga. Enter en el campo también agrega. Cantidad vuelve a 1 con <code>form.reset()</code>.</span>
+        <a class="abrir" href="1.2-submit/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">1.3</span><span class="titulo">Leer cada tipo de campo</span>
+        <span class="mostrar">“Café × 2”, urgentes en rojo, y el total de unidades bien sumado (gracias a <code>Number()</code>).</span>
+        <a class="abrir" href="1.3-leer-campos/index.html">Abrir</a>
+      </li>
+      <li class="ejercicio">
+        <span class="num">1.4 · Ej. A</span><span class="titulo">Categoría con select</span>
+        <span class="mostrar">“Café × 2 (Almacén)”.</span>
+        <a class="abrir" href="1.4-ejercicio-A-categoria/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">1.5</span><span class="titulo">Validación con HTML</span>
+        <span class="mostrar">Agregar vacío o cantidad 50 → globito del navegador. Tres espacios pasan el HTML, pero los frena el <code>trim()</code>.</span>
+        <a class="abrir" href="1.5-validacion-html/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">1.6</span><span class="titulo">Validación propia y errores en la página</span>
+        <span class="mostrar">Agregá “pan” con “Pan” en la lista: “"pan" ya está en la lista”. Después algo válido: el error se borra.</span>
+        <a class="abrir" href="1.6-validacion-js/index.html">Abrir</a>
+      </li>
+      <li class="ejercicio">
+        <span class="num">1.7 · Ej. B</span><span class="titulo">Máximo 10 productos</span>
+        <span class="mostrar">Al llegar a 10 aparece el error; se borra apenas volvés a escribir.</span>
+        <a class="abrir" href="1.7-ejercicio-B-limite/index.html">Abrir</a>
+      </li>
+    </ol>
+
+    <h2>Clase 2 · Almacenamiento</h2>
+    <ol>
+      <li>
+        <span class="num">2.1 y 2.2</span><span class="titulo">localStorage y JSON (demo)</span>
+        <span class="mostrar">Muestra en pantalla cada ejemplo de la consola: strings, <code>[object Object]</code> y JSON. Mirá Application → Local Storage.</span>
+        <a class="abrir" href="2.1-2.2-localstorage-json/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">2.3</span><span class="titulo">Guardar y cargar la lista</span>
+        <span class="mostrar">Arranca vacía. Agregá, tachá y recargá: sigue todo. La clave <code>lista-super</code> aparece en Application.</span>
+        <a class="abrir" href="2.3-guardar-cargar/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">2.4</span><span class="titulo">try/catch</span>
+        <span class="mostrar">En Application, cambiá <code>lista-super</code> por <code>[{"nombre":</code>. En el 2.3 la página se rompe; en el 2.4 arranca vacía y avisa en la consola.</span>
+        <a class="abrir" href="2.4-try-catch/index.html">Abrir</a>
+      </li>
+      <li class="ejercicio">
+        <span class="num">2.5 · Ej. C</span><span class="titulo">¿De quién es la lista?</span>
+        <span class="mostrar">Guardá un nombre: el título dice “Lista de Ana” y se recuerda al recargar.</span>
+        <a class="abrir" href="2.5-ejercicio-C-duenio/index.html">Abrir</a>
+      </li>
+      <li class="ejercicio">
+        <span class="num">2.6 · Ej. D</span><span class="titulo">Fecha de cada producto</span>
+        <span class="mostrar">Cada producto nuevo muestra “· 16/11”. Los guardados antes no tienen fecha.</span>
+        <a class="abrir" href="2.6-ejercicio-D-fecha/index.html">Abrir</a>
+      </li>
+    </ol>
+
+    <h2>Empezar limpio</h2>
+    <p>
+      Todos los pasos de la clase 2 comparten lo guardado (la clave <code>lista-super</code>), así
+      que lo que agregues en el 2.3 aparece en el 2.4. Para arrancar de cero antes de mostrar:
+    </p>
+    <p>
+      <button id="borrar" type="button">Borrar datos guardados de la lista</button>
+      <span id="estado-borrado"></span>
+    </p>
+
+    <script>
+      document.querySelector("#borrar").addEventListener("click", () => {
+        ["lista-super", "duenio", "nombre"].forEach((clave) => localStorage.removeItem(clave));
+        document.querySelector("#estado-borrado").textContent = "Listo: no queda nada guardado.";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asincronía y APIs · Unidad 8 resuelta</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        max-width: 760px;
+        margin: 40px auto;
+        padding: 0 16px;
+        line-height: 1.5;
+        color: #1d1c18;
+        background: #fbfaf6;
+      }
+      h1 { margin-bottom: 4px; }
+      .bajada { color: #5f5b4f; margin-top: 0; }
+      h2 { margin-top: 36px; font-size: 1.2rem; }
+      ol { list-style: none; padding: 0; display: grid; gap: 10px; }
+      ol > li {
+        display: grid;
+        grid-template-columns: 110px 1fr auto;
+        gap: 4px 14px;
+        align-items: start;
+        padding: 12px 14px;
+        background: #fff;
+        border: 1px solid #e4e0d3;
+        border-radius: 10px;
+      }
+      ol > li.ejercicio { border-left: 4px solid #8a5cc4; }
+      .num { font-family: ui-monospace, Consolas, monospace; font-weight: 600; }
+      .titulo { font-weight: 600; }
+      .mostrar { grid-column: 2; color: #5f5b4f; font-size: 0.92rem; }
+      .mostrar ul { margin: 4px 0 0; padding-left: 1.1rem; }
+      a.abrir {
+        grid-row: 1 / span 2;
+        grid-column: 3;
+        align-self: center;
+        padding: 6px 14px;
+        border-radius: 8px;
+        background: #f7df1e;
+        color: #000;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      a.abrir:hover { filter: brightness(0.95); }
+      .mostrar a { color: #7a5c00; }
+      code { font-family: ui-monospace, Consolas, monospace; font-size: 0.9em; }
+      .nota { padding: 12px 14px; border-radius: 10px; background: #fdf5bf; font-size: 0.95rem; }
+      @media (max-width: 560px) {
+        ol > li { grid-template-columns: 1fr; }
+        .mostrar, a.abrir { grid-column: 1; grid-row: auto; justify-self: start; }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Asincronía y APIs · Unidad 8</h1>
+    <p class="bajada">
+      Cada paso de la guía, resuelto y funcionando. Abrí esta página con Live Server y entrá a cada
+      paso con su botón. En cada carpeta, el <code>script.js</code> arranca con un resumen del paso,
+      y las líneas importantes están marcadas con ★.
+    </p>
+    <p class="nota">
+      Hace falta internet: todos los pasos menos el 1.1 y el 1.2 piden datos a APIs públicas.
+      Tené la consola y la pestaña <strong>Network</strong> abiertas mientras mostrás.
+    </p>
+
+    <h2>Clase 1 · Asincronía y fetch</h2>
+    <ol>
+      <li>
+        <span class="num">1.1</span><span class="titulo">Código que no espera</span>
+        <span class="mostrar">Los mensajes salen 1, 2, 3 aunque en el código el 3 está antes que el 2.</span>
+        <a class="abrir" href="1.1-codigo-que-no-espera/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">1.2</span><span class="titulo">Promesas</span>
+        <span class="mostrar">Pendiente → cumplida o rechazada. Tocá varias veces: el 30 % de las veces “se quema”.</span>
+        <a class="abrir" href="1.2-promesas/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">1.3</span><span class="titulo">¿Qué es una API?</span>
+        <span class="mostrar">Abrí estas direcciones en el navegador: devuelven datos en JSON, no páginas.
+          <ul>
+            <li><a href="https://pokeapi.co/api/v2/pokemon/pikachu" target="_blank" rel="noopener">pokeapi.co/api/v2/pokemon/pikachu</a></li>
+            <li><a href="https://jsonplaceholder.typicode.com/users" target="_blank" rel="noopener">jsonplaceholder.typicode.com/users</a></li>
+            <li><a href="https://dolarapi.com/v1/dolares" target="_blank" rel="noopener">dolarapi.com/v1/dolares</a></li>
+          </ul>
+        </span>
+      </li>
+      <li>
+        <span class="num">1.4</span><span class="titulo">fetch con .then()</span>
+        <span class="mostrar">“pikachu pesa 6 kg y mide 0.4 m”. En la consola, el objeto entero; en Network, el pedido.</span>
+        <a class="abrir" href="1.4-fetch-then/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">1.5</span><span class="titulo">async / await</span>
+        <span class="mostrar">Mismo resultado que el 1.4. Compará los dos <code>script.js</code> uno al lado del otro.</span>
+        <a class="abrir" href="1.5-async-await/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">1.6</span><span class="titulo">Chequear respuesta.ok</span>
+        <span class="mostrar">Buscá <code>ditto</code>, <code>25</code> y <code>pikachuu</code>: “No se encontró "pikachuu" (error 404)”.</span>
+        <a class="abrir" href="1.6-respuesta-ok/index.html">Abrir</a>
+      </li>
+      <li class="ejercicio">
+        <span class="num">1.7 · Ej.</span><span class="titulo">Directorio de usuarios</span>
+        <span class="mostrar">Diez tarjetas con nombre, email y ciudad, traídas al abrir la página.</span>
+        <a class="abrir" href="1.7-ejercicio-usuarios/index.html">Abrir</a>
+      </li>
+    </ol>
+
+    <h2>Clase 2 · Un buscador completo</h2>
+    <ol>
+      <li>
+        <span class="num">2.1</span><span class="titulo">Buscador con estados</span>
+        <span class="mostrar">“Cargando…”, el error en rojo y la tarjeta con imagen. El botón se deshabilita mientras carga.</span>
+        <a class="abrir" href="2.1-buscador-con-estados/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">2.2</span><span class="titulo">Más datos</span>
+        <span class="mostrar">Altura, peso y habilidades. Mostrá de dónde salen: Network → el pedido → Preview.</span>
+        <a class="abrir" href="2.2-mas-datos/index.html">Abrir</a>
+      </li>
+      <li class="ejercicio">
+        <span class="num">2.3 · Ej.</span><span class="titulo">Cotización del dólar</span>
+        <span class="mostrar">Tabla con compra y venta en pesos, botón Actualizar y la hora de la última actualización.</span>
+        <a class="abrir" href="2.3-ejercicio-dolar/index.html">Abrir</a>
+      </li>
+      <li>
+        <span class="num">2.4</span><span class="titulo">Pokédex con favoritos</span>
+        <span class="mostrar">☆ guarda el Pokémon; “Mis favoritos” sobrevive al recargar; tocar uno lo vuelve a buscar.</span>
+        <a class="abrir" href="2.4-favoritos/index.html">Abrir</a>
+      </li>
+      <li class="ejercicio">
+        <span class="num">2.5 · Ej.</span><span class="titulo">Rick and Morty con paginación</span>
+        <span class="mostrar">20 personajes por página; Anterior queda deshabilitado en la primera página.</span>
+        <a class="abrir" href="2.5-ejercicio-rick-and-morty/index.html">Abrir</a>
+      </li>
+    </ol>
+  </body>
+</html>
